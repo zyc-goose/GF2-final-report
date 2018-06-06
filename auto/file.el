@@ -8,15 +8,15 @@
    (TeX-add-to-alist 'LaTeX-provided-package-options
                      '(("inputenc" "utf8") ("fontenc" "T1") ("ulem" "normalem") ("geometry" "margin=3cm") ("appendix" "titletoc" "title")))
    (add-to-list 'LaTeX-verbatim-environments-local "lstlisting")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperref")
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "lstinline")
-   (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperref")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "lstinline")
+   (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
    (TeX-run-style-hooks
     "latex2e"
     "titlepage"
@@ -48,41 +48,43 @@
     "geometry"
     "appendix")
    (LaTeX-add-labels
-    "sec:org4fc4869"
-    "sec:org6ac67bb"
-    "sec:orga772621"
-    "orgb2fd366"
-    "sec:org99cb2bd"
-    "sec:orgaffd8c6"
-    "org6f6e406"
-    "sec:orgfb7a04d"
-    "sec:org38e6e0d"
-    "sec:orgf17cd14"
-    "sec:org38fd84f"
-    "sec:org929ecc2"
-    "fig:orgaec3f5b"
-    "sec:orgb27eba3"
-    "sec:org0a9238d"
-    "sec:org69f2c8b"
-    "sec:org7fd0f3f"
-    "sec:orgccb520f"
-    "sec:org1a6ee52"
-    "sec:orgda3e6d5"
-    "sec:org6d55e23"
-    "sec:orga9e018c"
-    "sec:org57dc4e1"
-    "sec:orgdb599ed"
-    "sec:org19573e6"
-    "sec:org08be7c5"
-    "sec:orgf7b2cbd"
-    "sec:org6e3d71d"
-    "sec:org38081ff"
-    "sec:org24a5586"
-    "sec:org29b2a6f"
-    "sec:orgecf216b"
-    "sec:org8a7a4c1"
-    "sec:orgd2879f4"
-    "sec:org8314ce4"
-    "sec:org035f984"))
+    "sec:orgf2a6e99"
+    "sec:org5f350c5"
+    "sec:org7d9959c"
+    "org6f9e7f7"
+    "sec:org6afdebf"
+    "sec:orgacf2577"
+    "org9cea803"
+    "sec:org582f835"
+    "sec:org69a8145"
+    "sec:orgfc06881"
+    "sec:orgbf5cd6a"
+    "sec:org54a3a26"
+    "fig:org34cc76d"
+    "sec:org5cab37f"
+    "sec:orgd0a43aa"
+    "sec:orgb071fc8"
+    "sec:org609724a"
+    "sec:org2d66642"
+    "sec:org3615d9e"
+    "sec:orga94e1d1"
+    "sec:org31411fb"
+    "sec:org7aa4a59"
+    "sec:orgcddbec0"
+    "sec:org2aabf25"
+    "sec:org082a594"
+    "sec:orga814427"
+    "sec:org2a74204"
+    "sec:org273f36a"
+    "sec:org6f20565"
+    "sec:org6d76d80"
+    "sec:orga7f4ad8"
+    "sec:orga21513a"
+    "sec:org5d95e3f"
+    "sec:org6edfe74"
+    "sec:orga473cd2"
+    "sec:org4dfef29"
+    "sec:org716edfa"
+    "sec:org0566521"))
  :latex)
 

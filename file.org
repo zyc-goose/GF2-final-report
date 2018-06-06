@@ -26,25 +26,17 @@
 
 * Introduction
 
-In the coursework assignment we have implemented linear and RBF
-classifiers based on maximum likelihood estimation (MLE). A practical
-problem of MLE classifiers is that they are likely to suffer from data
-overfitting (high variance). In the FTR assignment we are going to
-implement a /Bayesian classifier/ which includes a Gaussian prior to
-penalise high variance of our model parameters. In order to obtain the
-predictive distribution (which is an integration with respect to the
-posterior distribution over all possible model parameters), /Laplace
-approximation/ is used to obtain a Gaussian approximation of the
-posterior distribution. In the hyperparameter tuning stage, we also
-need to maximise the /model evidence/ to get the optimal model
-hyperparameters. 
-
-This report first goes through all the necessary theory involved in
-the Bayesian classifier and then explains the core Python code used in
-the classifier implementation. The final results are presented in
-terms of predictive distribution contour plots, train/test
-log-likelihoods and confusion matrices, which we will discuss
-carefully in the end
+This report is an overall summary of the GF2 Software project. In this
+project, our task is to design, implement and test a logic simulator
+using the Python language, as a team of three members. This report
+first introduces the overall functions and the software structure of
+the simulator, and then explains the basic approaches we used to
+achieve efficient teamwork. There is also a brief introduction of my
+contribution to the project, which includes the source files I have
+written and the intuitions and basic logic behind the code
+implementation. Finally, an explanation of the testing procedures we
+have adopted and a statement of possible improvement on the software
+and teamwork are presented at the end.
 
 * Functions of the Logic Simulator
 
@@ -387,15 +379,6 @@ support for rendering Unicode characters. In the end, we used a
 `hand-crafted' solution: draw the Chinese hoverbox manually, make a
 screenshot of it and then render the image on the canvas.
 
-
-
-
-All the classes and methods written by us need to be tested, either
-formally or informally. The =gui= module needs to be tested by
-numerous experiments on the actual software, while the other modules
-can be tested formally using the =pytest= module.
-
-
 * My Contribution to the Project
 
 As stated in the previous section, I am in charge of the design,
@@ -563,9 +546,75 @@ project time.
 
 * Testing Procedures
 
+In this project, we have informal and formal tests for our software.
+The informal tests are mainly used in the =gui= module, while the
+formal tests (using =pytest= module) are used in all other modules.
 
+The testing of the =gui= module is tricky since it's very difficult to
+write unit tests for each method. Therefore, all the testings are done
+by experiment: run the simulator and then check the expected or
+unexpected behaviours. The simple iteration process is adopted:
+implementation -> experiment -> debugging. Usually, we test the
+functionalities immediately after a method or even several lines of
+code are implemented, in order to keep everything under control.
+
+All the modules other than =gui= are tested using the =pytest= module.
+The testing procedure for these modules is looser than that of the
+=gui= module: we first implement the whole module and then do some
+informal tests to find the obvious bugs, and finally write a test
+module to thoroughly check the module's functionalities. Unit tests
+are written for all the non-gui modules to test each individual
+method. Integration tests are prepared for the =parse= module since it
+involves error handling and we need to check the final error codes.
 
 * Possible Improvements
 
+Our logic simulator is not a perfect software since this is just a
+4-week project and we are not professional software engineers. The
+software itself has plenty room for further improvement, and our
+teamwork could also be more coordinated.
+
+** Potential improvement for the software
+
+The coding style can be further improved. Although we have made our
+code PEP8 compliant eventually, some of the code is still not very
+readable and each team member has his own coding style and naming
+convention. This sometimes causes inefficiency since it becomes harder
+for each team member to understand other teammates' code. The coding
+style and naming convention for the team should have been specified at
+the very beginning of the project.
+
+Possible improvements also exist for the GUI design. For example, the
+maximum simulation cycles per page is fixed at 60 and is not
+adjustable by the user. It's possible to provide a `preference'
+function where the user can customise the system settings. Also, due
+to the time limitation, we only put the EBNF syntax definition in the
+help page, which is actually not very helpful for users. A better help
+page can be made by putting a table of content of the available
+functions and write the help information for each of them.
+
+** Potential improvement for the teamwork
+
+Although everything has worked quite as expected, our teamwork can
+still be further improved. For example, we actually anticipated the
+circumstance where the implementation of the non-GUI modules is faster
+than the implementation of the GUI, but we did not have a suitable
+plan for this circumstance. Therefore, me and Paul had nothing to do
+after the integration of =scanner= and =parse=, until we finally
+joined the GUI implementation. To achieve better teamwork, we need to
+be very prepared for possible or unexpected circumstances which slow
+down the whole development process.
+
 * Conclusion
+
+In the GF2 Software Project, we have implemented a logic simulator
+software as a team of 3. The logic simulator uses a graphical user
+interface to interact with the user, which can read a logic circuit
+definition file, build and simulate the circuit, and present the
+output waveforms of the monitored signals on the screen. In this
+project, I have got a feel of the formal software development process,
+which involves the design, implementation, testing and the maintenance
+phases. I have also got more used to writing Python code and using the
+version control software Git. Also, the teamwork skills I learned
+through this project will be extremely beneficial to my future career.
     
